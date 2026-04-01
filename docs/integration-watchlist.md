@@ -11,6 +11,9 @@ execution scope.
 | `NEXUS` | Coordination surfaces may need visible suite time context. | Embedded clock and timestamp formatting contract. | Messaging/coordination requirements should wait until TEMPO v1 is stable. |
 | `EPOCH` | Calendar/scheduling work will need a boundary with TEMPO. | Explicit contract split: TEMPO owns clock/time display, EPOCH owns scheduling. | EPOCH and TEMPO boundaries should be documented before any deeper coupling. |
 
+Each downstream embed should consume the TEMPO native C-backed clock contract rather
+than fork time logic into its host surface.
+
 ## Rule Of Use
 
 If an integration is still speculative, keep it here instead of promoting it into active

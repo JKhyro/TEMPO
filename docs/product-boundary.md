@@ -25,6 +25,9 @@ before it expands into broader scheduling or calendar concerns.
 
 - `UTC` is the canonical reference time.
 - TEMPO surfaces must label timezone context explicitly.
+- Native C is the default implementation language for TEMPO-owned logic.
+- Avalonia is an approved host surface, but its C# layer should stay thin and limited
+  to host/bootstrap/interoperability work that the framework requires.
 - The first visible surface should work without waiting on `SYNAPSIS`, `SYMBIOSIS`,
   `ANVIL`, `NEXUS`, or `EPOCH`.
 - Any downstream integration should consume this contract instead of redefining it.
